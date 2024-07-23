@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css"> 
+</head>
+<script>
+function log() {
+   fullname = document.forms["sign"]["fullname"];
+   email = document.forms["sign"]["email"];
+   username = document.forms["sign"]["usernames"];
+   password = document.forms["sign"]["passwords"];
+
+  if (fullname.value == "") {
+      alert("Please enter your full name");
+      fullname.focus();
+      return false;
+  } else if (email.value == "") {
+      alert("Please enter a valid email");
+      email.focus();
+      return false;
+  } else if (username.value == "") {
+      alert("Please enter a username");
+      username.focus();
+      return false;
+  } else if (password.value == "") {
+      alert("Please enter a password");
+      password.focus();
+      return false;
+  } else if (fullname.value == "Premalatha" && email.value == "22cse.premalatha.p@skct.edu.in" && username.value == "Prema" && password.value == "12345") {
+      alert("SignUp successfully");
+      window.location.href = "loginRide.html";
+      return false;
+  } else {
+      alert("Enter valid data");
+      return false;
+  }
+}
+</script>
+<body>
+  <div class="signup-container">
+    <form class="signup-form" name="sign" onsubmit="return log()">
+      <h2>Sign Up</h2>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="usernames" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="passwords" required>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+      <p class="login-link">Already have an account? <a href="loginRide.html">Log in</a></p>
+    </form>
+  </div>
+</body>
+</html>

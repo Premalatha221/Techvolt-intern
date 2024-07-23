@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish</title>
+    <link rel="stylesheet" href="publish.css">
+</head>
+<script>
+    function goToHomePage() {
+      window.location.href = "home.html"; 
+    }
+  </script>
+<body>
+   <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Become a DriveTogether driver and save on travel costs by sharing your ride with passengers.</h1>
+            </div>
+            <div class="ride-form">
+                
+                    <div class="form-group">
+                        <label for="from-city">From City:</label>
+                        <select style="width: 100%; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;">
+                            <option value="Delhi">Delhi</option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="to-city">To City:</label>
+                        <select style="width: 100%; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;">
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Passengers: 
+                            <input type="number" name="passengers" value="2" min="1" max="5">
+                        </label>
+                    </div>
+                    <p>Save up to <span class="amount">₹1,180</span> on your first ride.</p>
+                    <button onclick="goToHomePage()" type="submit">Publish a ride</button>
+                </form>
+            </div>
+            <div class="car-image">
+                <img src="car2.png" alt="Car with passengers">
+            </div>
+        </section>
+    </div>
+    <br><br><br><br><br>
+    <div class="contain">
+        <section class="heroes">
+            <div class="video">
+                <video src="en_IN.webm" width="400" controls autoplay muted>
+                    
+                    
+                </video>
+            </div>
+            <div class="content">
+                <h1>Become a DriveTogether driver </h1>
+                <ul>
+                    <li><strong>Create a DriveTogether account:</strong> Add your profile picture, a few words about you and your phone number to increase trust between members.</li>
+                    <li><strong>Publish your ride:</strong> Indicate departure and arrival points, the date of the ride, and check our recommended price to increase your chances of getting your first passengers and ratings.</li>
+                    <li><strong>Accept booking requests:</strong> Review passenger profiles and accept their requests to ride with you. That’s how easy it is to start saving on travel costs!</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <button onclick="goToHomePage()" type="button" class="publish-btn">Publish a ride</button>
+    </footer>
+</body>
+</html>

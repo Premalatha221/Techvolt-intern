@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking Page</title>
+    <style>
+        body {
+            background-image: url('bus.png'); 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 120px;
+            margin-left: 400px;
+            background: #75c0dd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function goToPage(event) {
+            event.preventDefault(); 
+            window.location.href = "Payment.html"; 
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Booking</h1>
+        <form onsubmit="goToPage(event)">
+            <div class="form-group">
+                <label for="from">From:</label>
+                <select id="from" name="from">
+                    <option value="chennai">Chennai</option>
+                    <option value="coimbatore">Coimbatore</option>
+                    <option value="villupuram">Villupuram</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <select id="to" name="to">
+                    <option value="cuddalore">Cuddalore</option>
+                    <option value="coimbatore">Coimbatore</option>
+                    <option value="villupuram">Villupuram</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

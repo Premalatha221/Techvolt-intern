@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking Page</title>
+    <style>
+        body {
+            background-image: url('carshare.jpeg'); 
+            background-repeat: no-repeat; 
+            background-size: cover;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #75c0dd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group, .car-group {
+            margin-bottom: 15px;
+        }
+        .form-group label, .car-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select, .car-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .car-group {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .car-group .details {
+            flex: 1;
+        }
+        .car-group button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .car-group button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function bookCar(carName) {
+            alert("You have booked " + carName);
+            window.location.href = "Payment.html";
+        }
+        
+       
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Booking</h1>
+        <h2>Available Cars</h2>
+        <div class="car-group">
+            <div class="details">
+                <label>Car: Sedan</label>
+                <p>Cost: Rs500</p>
+            </div>
+            <button onclick="bookCar('Sedan')">Book Now</button>
+        </div>
+        <div class="car-group">
+            <div class="details">
+                <label>Car: SUV</label>
+                <p>Cost: Rs850</p>
+            </div>
+            <button onclick="bookCar('SUV')">Book Now</button>
+        </div>
+        <div class="car-group">
+            <div class="details">
+                <label>Car: Hatchback</label>
+                <p>Cost: Rs1500</p>
+            </div>
+            <button onclick="bookCar('Hatchback')">Book Now</button>
+        </div>
+        <div class="car-group">
+            <div class="details">
+                <label>Car: Tata</label>
+                <p>Cost: Rs1050</p>
+            </div>
+            <button onclick="bookCar('Tata')">Book Now</button>
+        </div>
+    </div>
+</body>
+</html>

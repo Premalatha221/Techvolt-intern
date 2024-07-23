@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="Payment.css">
+  <script>
+    function log()
+    {
+        alert("Payment succsessfully Completed");
+    }
+  </script>
+  <script>
+    function goToHomePage() {
+      window.location.href = "success.html"; 
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <form class="payment-form" onsubmit="return log()">
+      <h2>Payment Details</h2>
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+      </div>
+      <div class="form-group">
+        <label for="expiryDate">Expiry Date</label>
+        <input type="month" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+      </div>
+      <div class="form-group">
+        <label for="cardHolder">Cardholder Name</label>
+        <input type="text" id="cardHolder" name="cardHolder" placeholder="Cardholder name" required>
+      </div>
+      <button onclick="goToHomePage()" type="submit" class="btn">Pay Now</button>
+    </form>
+  </div>
+</body>
+</html>
